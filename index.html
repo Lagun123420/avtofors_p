@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Avtofors - Ваш надежный автосервис в Варшаве. Рихтовка, покраска, ремонт двигателей и подвески, обслуживание автокондиционеров и многое другое. Обращайтесь к нам!"
+    />
+    <meta property="og:title" content="Avtofors - Автосервис в Варшаве" />
+    <meta
+      property="og:description"
+      content="Рихтовка, покраска, ремонт двигателей и подвески, обслуживание автокондиционеров. Высокое качество, доступные цены!"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,15 +21,21 @@
     <title>Avtofors</title>
     <link rel="stylesheet" href="./style-min.css" />
   </head>
-  <body class="body">
+  <body class="body overflowHiden">
+    <div class="loader-wrapper active" id="loader">
+      <div class="loader">
+        <div class="left-gate"></div>
+        <!-- <div class="right-gate"></div> -->
+        <img src="./src/logo/avtofors-top.webp" id="logo_image" alt="avtofors_logo" width="800px">
+      </div>
+    </div>
     <header class="header">
       <nav class="navbar">
         <ul class="nav">
-          <li><a href="#" data-i18n="about_us">О нас</a></li>
-          <li><a href="#" data-i18n="map">Карта</a></li>
-          <li><a href="#" data-i18n="contacts">Контакты</a></li>
-          <li><a href="#"data-i18n="services">Услуги</a></li>
-          <li><a href="#"></a></li>
+          <li><a href="#section_2" data-i18n="about_us">О нас</a></li>
+          <li><a href="#section_3" data-i18n="map">Карта</a></li>
+          <li><a href="#section_3" data-i18n="contacts">Контакты</a></li>
+          <li><a href="#section_4" data-i18n="services">Услуги</a></li>
         </ul>
 
         <button class="menu-mobile" onclick="openMobileMenu()">
@@ -37,11 +52,10 @@
           </div>
           <ul class="nav-mobile">
             <div class="title-nav">AvtoFors</div>
-            <li><a href="#" data-i18n="about_us">О нас</a></li>
-            <li><a href="#" data-i18n="map">Карта</a></li>
-            <li><a href="#" data-i18n="contacts">Контакты</a></li>
-            <li><a href="#" data-i18n="services">Услуги</a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#section_2" data-i18n="about_us" onclick="openMobileMenu()">О нас</a></li>
+            <li><a href="#section_3" data-i18n="map" onclick="openMobileMenu()">Карта</a></li>
+            <li><a href="#section_3" data-i18n="contacts" onclick="openMobileMenu()">Контакты</a></li>
+            <li><a href="#section_4" data-i18n="services" onclick="openMobileMenu()">Услуги</a></li>
           </ul>
         </div>
       </nav>
@@ -568,21 +582,34 @@
           <div class="title" data-i18n="contacts">Контакты</div>
           <div class="item-container">
             <div class="info">
-              <div class="title" data-i18n="address">Avtofors ул. Инсталяторов</div>
+              <div class="title" data-i18n="address">
+                Avtofors ул. Инсталяторов
+              </div>
               <div class="text-info">
-                Instalatorów 7C, <br/><span data-i18n="city">02-237 Варшава, Польша</span>
+                <a
+                  href="https://maps.app.goo.gl/oTsKsPND91dqkSwY8"
+                  target="_blank"
+                >
+                  Instalatorów 7C, <br /><span data-i18n="city"
+                    >02-237 Варшава, Польша</span
+                  >
+                </a>
               </div>
               <div class="text-info">
                 <a href="tel:+4733378901"> +48 576 600 198 </a>
               </div>
-              <div class="text-info">ПН-ПТ 09:00-18:00</div>
-              <div class="text-info">СБ 09:00-15:00</div>
+              <div class="text-info" data-i18n="mon_fri">ПН-ПТ 09:00-18:00</div>
+              <div class="text-info" data-i18n="sat">СБ 09:00-15:00</div>
             </div>
             <div class="image-map-container">
-              <img
-                src="./src/maps/instalatorov.webp"
-                alt="avtofors-instalatorov"
-              />
+              <a
+                href="https://maps.app.goo.gl/oTsKsPND91dqkSwY8"
+                target="_blank"
+              >
+                <img
+                  src="./src/maps/instalatorov.webp"
+                  alt="avtofors-instalatorov"
+              /></a>
             </div>
           </div>
           <div class="delimiter"></div>
@@ -611,7 +638,9 @@
             <!-- <div class="icon">
               <img src="./src/icons/telephone.svg" alt="dw12" />
             </div> -->
-            <span>Instalatorów 7C, <br />02-237 Warszawa, Poland</span>
+            <a href="https://maps.app.goo.gl/oTsKsPND91dqkSwY8" target="_blank">
+              <span>Instalatorów 7C, <br />02-237 Warszawa, Poland</span></a
+            >
           </div>
           <div class="item">
             <div class="icon">
@@ -631,7 +660,7 @@
           </div>
 
           <a href="https://t.me/+48576600198">
-            <span>telegram</span>
+            <span>Telegram</span>
           </a>
         </div>
         <!-- <div class="item">
@@ -645,7 +674,7 @@
             <img src="./src/icons/instagram.svg" alt="" />
           </div>
           <a href="https://www.instagram.com/_avtofors_/">
-            <span>instagram</span>
+            <span>Instagram</span>
           </a>
         </div>
       </div>
